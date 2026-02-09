@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FAF3E0;
+  color: #3E2723;
+}
+
+
+
+/* === Layout Container === */
+.main-container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* === Card === */
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Card Title === */
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* === Input Row === */
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* === Input Fields === */
+.input-row input,
+.input-row select {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #dad6ce;
+  border-radius: 0.375rem;
+  transition: border-color 0.2s;
+}
+
+.input-row input:focus,
+.input-row select:focus {
+  outline: none;
+  border-color: #4dabf7;
+  box-shadow: 0 0 0 3px rgba(247, 199, 77, 0.25);
+}
+
+/* === Add Button === */
+#addCategory {
+  background-color: #875f19;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 0.375rem;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+#addCategory:hover {
+  background-color: #736515;
+}
+
+/* === Table Styling === */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+  background-color: #f7f5ed;
+}
+
+#scrapTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#scrapTable th,
+#scrapTable td {
+  border: 1px solid #f7f4ed;
+  padding: 10px;
+  text-align: center;
+}
+
+#scrapTable th {
+  background-color: #f7f4ed;
+  color: #000;
+}
+
+#scrapTable tbody tr:hover {
+  background-color: #fffdf0;
+}
+
+/* === Responsive Styling === */
+@media screen and (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  .input-row input,
+  .input-row select {
+    width: 100%;
+  }
+
+  #addCategory {
+    width: 100%;
+  }
+}
+
+/* === Price Input Styling === */
+.price-input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #dad8ce;
+  border-radius: 0.375rem;
+  width: 100%; /* Make input full width */
+  transition: border-color 0.2s;
+}
+
+.price-input:focus {
+  outline: none;
+  border-color: #f4f74d;
+  box-shadow: 0 0 0 3px rgba(247, 193, 77, 0.25);
+}
+
+/* === Remove Button Styling === */
+.remove-btn {
+  background-color: #ff4e4e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 0.375rem;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.remove-btn:hover {
+  background-color: #711821;
+}
+
+/* 🔔 Toast Notification Styles */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #28a745; /* success green */
+  color: white;
+  padding: 14px 22px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast.error {
+  background-color: #dc3545;
+}
+
+.toast.info {
+  background-color: #007bff;
+}
+
+.toast-icon {
+  font-size: 18px;
+}

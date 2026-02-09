@@ -1,0 +1,182 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.welcome-text {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.main-container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #198754;
+}
+
+/* Container for the range filter */
+.month-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end; /* aligns it nicely on the right side */
+  margin-top: 5px;
+}
+
+/* Label text style */
+.month-filters label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Month input boxes */
+.month-filters input[type="month"] {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  background-color: #fff;
+  transition: 0.2s ease;
+}
+
+.month-filters input[type="month"]:hover {
+  border-color: #999;
+}
+
+.month-filters input[type="month"]:focus {
+  border-color: #ff8000;
+  box-shadow: 0 0 4px rgba(255, 128, 0, 0.3);
+}
+
+/* Buttons */
+.month-filters .btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+/* Filter button (orange) */
+.month-filters .btn {
+  background-color: #ff8000;
+  color: white;
+}
+
+.month-filters .btn:hover {
+  background-color: #e37300;
+}
+
+/* Reset button (gray) */
+.month-filters .btn-secondary {
+  background-color: #666;
+}
+
+.month-filters .btn-secondary:hover {
+  background-color: #555;
+}
+
+
+.logout-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.logout-btn:hover {
+  background-color: #c82333;
+}
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .input-row input,
+  .input-row button,
+  .input-row select {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-logo {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .month-filters {
+    flex-direction: column;
+  }
+  .month-filters .btn {
+    width: 100%;
+  }
+}
+
+

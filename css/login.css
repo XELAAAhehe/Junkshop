@@ -1,0 +1,343 @@
+:root {
+    --primary: #FF9800;
+    --primary-dark: #F57C00;
+    --secondary: #795548;
+    --light: #FAF3E0;
+    --dark: #3E2723;
+    --accent: #FF5722;
+}
+
+/* Full background with gradient */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #FAF3E0;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card wrapper */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px; /* Added padding to prevent edge touching on small screens */
+}
+
+.login-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 380px; /* Changed to max-width for responsiveness */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+/* Logo circle floating */
+.logo-circle {
+    width: 150px;
+    height: 150px;
+    background: var(--light);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Headings */
+h2 {
+    margin: 10px 0 5px;
+    color: var(--dark);
+    font-size: 24px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(255,152,0,0.4);
+    background: #fff;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Messages */
+.msg {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.msg.error {
+    color: red;
+}
+
+.msg.success {
+    color: green;
+}
+
+/* Extra links */
+.extra-links {
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.extra-links a {
+    text-decoration: none;
+    color: var(--primary-dark);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.extra-links a:hover {
+    color: var(--accent);
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+    .login-card {
+        padding: 35px 25px;
+        max-width: 400px;
+    }
+
+    .logo-circle {
+        width: 130px;
+        height: 130px;
+    }
+
+    .logo-circle img {
+        width: 130px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+
+    input {
+        padding: 11px 13px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 11px;
+        font-size: 15px;
+    }
+}
+
+
+
+/* Tablets and smaller laptops (max-width: 768px) */
+@media (max-width: 768px) {
+    .login-wrapper {
+        padding: 15px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+        max-width: 90%;
+        border-radius: 12px;
+    }
+
+    .logo-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo-circle img {
+        width: 120px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    input {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .extra-links {
+        font-size: 13px;
+    }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        height: auto; /* Allow scrolling if needed on very small screens */
+        min-height: 100vh;
+        padding: 10px 0;
+    }
+
+    .login-wrapper {
+        padding: 10px;
+        align-items: flex-start; /* Align to top on very small screens to avoid cutoff */
+        margin-top: 20px;
+    }
+
+    .login-card {
+        padding: 20px 15px;
+        max-width: 95%;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Lighter shadow for mobile */
+    }
+
+    .logo-circle {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .logo-circle img {
+        width: 100px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin: 8px 0 4px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .input-group {
+        margin-bottom: 12px;
+    }
+
+    input {
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    .msg {
+        font-size: 13px;
+    }
+
+    .extra-links {
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .extra-links p {
+        margin: 5px 0; /* Stack links vertically if needed */
+    }
+}
+
+/* Ultra-small devices (e.g., 320px and below, like older iPhones) */
+@media (max-width: 360px) {
+    .login-card {
+        padding: 15px 10px;
+        max-width: 100%;
+        border-radius: 6px;
+    }
+
+    .logo-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .logo-circle img {
+        width: 80px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    input {
+        padding: 8px 8px;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .extra-links {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,9 @@
+/vendor
+/node_modules
+.env
+.DS_Store
+.vscode/
+
+# IGNORE SECRETS
+includes/smtp_config.php
+includes/db.php

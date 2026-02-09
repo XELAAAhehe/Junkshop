@@ -1,0 +1,395 @@
+:root {
+    --primary: #FF9800;
+    --primary-dark: #F57C00;
+    --secondary: #795548;
+    --light: #FAF3E0;
+    --dark: #3E2723;
+    --accent: #FF5722;
+}
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 8px 0 16px;
+  color: #3E2723;
+  text-align: center;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FAF3E0;
+  color: #3E2723;
+}
+
+/* Container */
+.profile-container {
+    max-width: 900px;
+    margin: 40px auto 80px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(121, 85, 72, 0.1);
+    padding: 32px 40px;
+}
+
+/* Flash messages */
+.alert {
+    padding: 14px 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+.alert.error {
+    background: #ffebee;
+    color: var(--accent);
+    border: 1px solid #ffccbc;
+}
+.alert.success {
+    background: #fff3e0;
+    color: var(--primary-dark);
+    border: 1px solid var(--primary);
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Profile Picture */
+.profile-pic {
+    flex: 0 0 160px;
+    text-align: center;
+}
+.profile-pic img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+.profile-pic img:hover {
+    transform: scale(1.05);
+}
+.profile-pic button {
+    margin-top: 14px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.profile-pic button:hover {
+    background: #e64a19;
+}
+
+/* Profile Info */
+.profile-info {
+flex: 1; background: var(--light); padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.profile-info h2 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+    color: var(--primary);
+    font-weight: 700;
+}
+.profile-info p {
+    font-size: 1.1rem;
+    margin: 6px 0;
+    color: var(--secondary);
+}
+.profile-info p strong {
+    color: var(--dark);
+}
+.profile-info button.edit-btn {
+    margin-top: 20px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.profile-info button.edit-btn:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* Profile Update Form */
+.profile-form {
+    margin-top: 40px;
+    background: var(--light);
+    padding: 28px 32px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(121, 85, 72, 0.1);
+}
+.profile-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: var(--primary);
+    font-weight: 700;
+    text-align: center;
+}
+.profile-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--secondary);
+    margin-top: 16px;
+}
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form input[type="password"],
+.profile-form input[type="file"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #cfc1b8;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: #fff;
+    color: var(--dark);
+}
+.profile-form input[type="text"]:focus,
+.profile-form input[type="email"]:focus,
+.profile-form input[type="password"]:focus,
+.profile-form input[type="file"]:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
+}
+
+/* Buttons inside form */
+.profile-form > form > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+    gap: 16px;
+}
+.profile-form button.btn-primary {
+    flex: 1;
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: none;
+    padding: 14px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.profile-form button.btn-primary:hover {
+    background: var(--primary-dark);
+}
+.profile-form button.btn-outline {
+    flex: 1;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 14px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.profile-form button.btn-outline:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(62, 39, 35, 0.5);
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.modal.open {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    padding: 28px 36px;
+    border-radius: 20px;
+    width: 360px;
+    max-width: 100%;
+    box-shadow: 0 12px 28px rgba(62, 39, 35, 0.15);
+    text-align: center;
+    position: relative;
+}
+.modal-content h3 {
+    margin: 0 0 12px;
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+.modal-content p.helper {
+    margin: 0 0 20px;
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.modal-content input {
+    width: 100%;
+    margin: 10px 0 20px;
+    padding: 14px 16px;
+    border: 1.5px solid #cfc1b8;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background: #fff;
+    color: var(--dark);
+}
+.modal-content input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 152, 0, 0.4);
+}
+.modal-content .actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+.modal-content button {
+    flex: 1;
+    padding: 14px 0;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+.btn-danger {
+    background: var(--accent);
+    color: #fff;
+}
+.btn-danger:hover {
+    background: #e64a19;
+}
+.btn-confirm {
+    background: var(--primary);
+    color: #fff;
+}
+.btn-confirm:hover {
+    background: var(--primary-dark);
+}
+.btn-cancel {
+    background: #eee;
+    color: var(--dark);
+}
+.btn-cancel:hover {
+    background: #fff2c5;
+
+}
+
+/* Inline error message */
+.inline-error {
+    color: var(--accent);
+    font-size: 0.95rem;
+    margin: -12px 0 16px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Shake animation */
+.shake {
+    animation: shake 0.3s linear 1;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+    75% { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .profile-pic {
+        flex: unset;
+    }
+
+    .profile-pic img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .profile-info h2 {
+        font-size: 1.6rem;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+    }
+
+    .profile-form {
+        padding: 20px;
+    }
+
+    .profile-form h3 {
+        font-size: 1.4rem;
+    }
+
+    .profile-form input {
+        font-size: 0.95rem;
+    }
+
+    .profile-form > form > div {
+        flex-direction: column;
+    }
+
+    .profile-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .profile-info p {
+        font-size: 0.95rem;
+    }
+}

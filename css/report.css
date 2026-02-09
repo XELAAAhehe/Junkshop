@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family:'Poppins', sans-serif;
+  background-color: #FAF3E0;
+  color: #3E2723;
+}
+
+
+/* Container */
+.report-container {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  margin-top: 20px;
+  border: 1px solid #f0eae2;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles */
+.report-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  margin-top: 0;
+  text-align: center;
+  color: #483e2d;
+}
+
+.report-subtitle {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: #685c4a;
+  text-align: center;
+}
+
+/* Date Filters */
+.report-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f7f3ed;
+}
+
+.report-filters label {
+  font-weight: 600;
+}
+
+.report-filters input[type="date"],
+.report-filters button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.report-filters button {
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+.report-filters button:hover {
+  background-color: #47450d;
+}
+
+/* Table Styles */
+.report-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #f0efe2;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.report-table thead {
+  background-color: #f7f5ed;
+}
+
+.report-table th,
+.report-table td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #f0ece2;
+  font-size: 1rem;
+}
+
+/* Color Coding */
+.report-table td:nth-child(1) {
+  color: #353636; /* Buys - Blue */
+  font-weight: bold;
+}
+
+.report-table td:nth-child(2) {
+  color: #e53e3e; /* Sells - Red */
+  font-weight: bold;
+}
+
+.report-table td:nth-child(3) {
+  color: #38a169; /* Income - Green */
+  font-weight: bold;
+}
+
+/* Chart Section */
+.report-graph {
+  margin-top: 30px;
+  background-color: #fcfaf7;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #f0ece2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .report-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .report-title {
+    font-size: 1.5rem;
+  }
+
+  .report-subtitle {
+    font-size: 1.25rem;
+  }
+}
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+#chartType {
+  padding: 8px 12px;
+  border: 2px solid #af9b4c;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+#chartType:hover {
+  background-color: #eafbe7;
+  border-color: #8e8738;
+}
+
+#chartType:focus {
+  border-color: #7d762e;
+  box-shadow: 0 0 0 2px rgba(157, 175, 76, 0.3);
+}
+.chart-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}

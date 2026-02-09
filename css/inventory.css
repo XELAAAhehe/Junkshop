@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FAF3E0;
+  color: #3E2723;
+}
+.main-container{
+    max-width: 960px;
+    margin: 40px auto;
+    padding:0 20px
+}
+.card{
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+.title{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Container for search + button */
+.search-bar {
+    margin-bottom: 20px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Space between input and button */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    background-color: #f7f4ed;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Search input */
+.search-bar input {
+    padding: 8px 12px;
+    width: 300px; /* Slightly wider */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Export button */
+.export-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #218838;
+    border: none; /* Ensure border is removed */
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.export-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Active effect (click) */
+.export-button:active {
+    transform: translateY(0);
+}
+
+/* Focus outline */
+.export-button:focus {
+    outline: 2px solid #218838;
+    outline-offset: 2px;
+}
+
+/* Icon size */
+.export-button i {
+    font-size: 16px; /* Bigger so it matches the text */
+}
+
+
+.table-wrapper {
+    overflow-x: auto;
+}
+#inventoryTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: white
+}
+
+th[data-sorted="asc"]::after { content: " ↑"; }
+th[data-sorted="desc"]::after { content: " ↓"; }
+
+#inventoryTable th,
+#inventoryTable td {
+    border: 1px solid #e6e4de;
+    padding: 10px;
+    text-align: center;
+}
+#inventoryTable th {
+    background-color: #f7f4ed;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 20px;
+    }
+    .main-container {
+        padding: 0 10px;
+    }   
+}
+    .export-button {
+      background-color: #218838;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      margin-right: 10px;
+    }
+    .export-button:hover {
+      background-color: #218838;
+    }
+    .export-button i {
+      margin-right: 8px;
+    }
+    .transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.transaction-table th,
+.transaction-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+.transaction-table th {
+  background-color: #f4f4f4;
+}
+.toggle-log-btn {
+  background: #eee;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}

@@ -1,0 +1,264 @@
+:root {
+    --primary: #FF9800;
+    --primary-dark: #F57C00;
+    --secondary: #795548;
+    --light: #FAF3E0;
+    --dark: #3E2723;
+    --accent: #FF5722;
+}
+
+/* Background gradient */
+/* Full background with gradient */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAF3E0;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper */
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Card */
+.register-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    text-align: center;
+    position: relative;
+}
+
+/* Logo circle floating */
+.logo-circle {
+    width: 150px;
+    height: 150px;
+    background: var(--light);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-circle img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Headings */
+h2 {
+    margin: 10px 0 5px;
+    color: var(--dark);
+    font-size: 24px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(255,152,0,0.4);
+    background: #fff;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Messages */
+.msg {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.msg.error {
+    color: red;
+}
+
+.msg.success {
+    color: green;
+}
+
+/* Login link */
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: var(--primary-dark);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-link a:hover {
+    color: var(--accent);
+}
+@media screen and (max-width: 1200px) {
+    .register-card {
+        width: 85%;
+        padding: 45px 35px;
+    }
+
+    .logo-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo-circle img {
+        width: 150px;
+    }
+    
+}
+
+
+@media screen and (max-width: 1000px) {
+    .register-card {
+        width: 85%;
+        padding: 40px 30px;
+    }
+
+    .logo-circle {
+        width: 145px;
+        height: 145px;
+    }
+
+    .logo-circle img {
+        width: 145px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+    .register-card {
+        width: 85%;
+        padding: 35px 25px;
+    }
+
+    .logo-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .logo-circle img {
+        width: 140px;
+    }
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    .register-card {
+        width: 85%;
+        padding: 30px 20px;
+    }
+
+    .logo-circle {
+        width: 130px;
+        height: 130px;
+    }
+
+    .logo-circle img {
+        width: 130px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .register-card {
+        width: 85%;
+        padding: 30px 20px;
+    }
+
+    .logo-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .logo-circle img {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .register-card {
+        width: 85%;
+        padding: 20px 15px;
+    }
+
+    .logo-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo-circle img {
+        width: 100px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

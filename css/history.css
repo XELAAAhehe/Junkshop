@@ -1,0 +1,440 @@
+/* === General Page Styling === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FAF3E0;
+  color: #3E2723;
+}
+
+/* === Layout Container === */
+.main-container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* === Card === */
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Card Title === */
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* === Table Styling === */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+#transactionTable,
+#historyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#transactionTable th,
+#transactionTable td,
+#historyTable th,
+#historyTable td {
+  border: 1px solid #efeddc;
+  padding: 10px;
+  text-align: center;
+}
+
+#transactionTable th,
+#historyTable th {
+  background-color: #edf2f7;
+  color: rgb(31, 30, 28);
+  background-color: #f7f6ed;
+}
+
+#transactionTable tfoot th {
+  background-color: #f5f5f1;
+  font-weight: bold;
+}
+
+/* Table container (optional) */
+#transactionTableContainer {
+  padding: 1rem;
+  background: #f7f6ed;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table structure */
+#tableBody tr {
+  transition: background 0.2s ease-in-out;
+}
+
+#tableBody tr:hover {
+  background-color: #fffaf0;
+}
+
+/* Partner Name column */
+#tableBody td:first-child {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Table headers */
+table thead {
+  background-color: #ffcc00;
+  color: white;
+  font-weight: bold;
+}
+
+table thead th {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 2px solid #b3ad00;
+}
+
+/* Table cells */
+table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #dee2e6;
+  color: #787563;
+}
+
+/* View button */
+.view-btn {
+  background-color: #c8bb00;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.view-btn:hover {
+  background-color: #3b5200;
+}
+
+
+/* === Responsive Styling === */
+@media screen and (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  .input-row input,
+  .input-row select,
+  .input-row button {
+    width: 100%;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .action-buttons button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .main-container {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-logo {
+    margin-bottom: 10px;
+  }
+}
+.item-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.item-details-table th,
+.item-details-table td {
+  padding: 10px 12px;
+  border: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.item-details-table thead {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.item-details-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.date-filters {
+  display:inline-flex;
+  flex-wrap: wrap;
+  align-items:stretch;
+  gap: 10px;
+  padding: 15px;
+  background-color: #f7f5ed;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.date-filters label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #575549;
+  margin-right: 5px;
+}
+
+.date-filters input[type="date"] {
+  padding: 8px 12px;
+  border: 1px solid #dad8ce;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #575649;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.date-filters input[type="date"]:hover {
+  border-color: #adb5bd;
+}
+
+.date-filters input[type="date"]:focus {
+  outline: none;
+  border-color: #f7c74d;
+  box-shadow: 0 0 0 3px rgba(247, 222, 77, 0.747);
+}
+
+/* Custom calendar icon */
+.date-filters input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.date-filters input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  filter: invert(0.3);
+}
+
+#clearFiltersBtn {
+  padding: 8px 16px;
+  background-color: #f5f4f1;
+  border: 1px solid #dad9ce;
+  border-radius: 6px;
+  color: #575449;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#clearFiltersBtn:hover {
+  background-color: #edefe9;
+  border-color: #bcbdad;
+}
+
+#clearFiltersBtn:active {
+  background-color: #dee2e6;
+}
+
+/* Optional: Add a small icon to the clear button */
+#clearFiltersBtn::before {
+  content: "✕";
+  font-size: 12px;
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .date-filters {
+    display:inline-flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .date-filters > div {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  };
+
+  
+  .date-filters label {
+    min-width: 80px;
+  }
+  
+  #clearFiltersBtn {
+    margin-top: 5px;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .date-filters {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items:stretch;
+    gap: 10px;
+  }
+  
+  .date-filters > div {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .date-filters label {
+    min-width: 80px;
+  }
+  
+  #clearFiltersBtn {
+    margin-top: 5px;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .date-filters input[type="text"] {
+    flex: 1 1 100%; /* Make search input take full width on small screens */
+  }
+    .date-filters {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items:stretch;
+    gap: 10px;
+  }
+  
+  .date-filters > div {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .date-filters label {
+    min-width: 80px;
+  }
+  
+  #clearFiltersBtn {
+    margin-top: 5px;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+/* === Search Input Styling === */
+.date-filters input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid #dad8ce;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #ffca80;
+  background-color: white;
+  transition: all 0.2s;
+  flex: 1; /* Allow the search input to grow */
+}
+.date-filters input[type="text"]:hover {
+  border-color: #bbbdad;
+}
+.date-filters input[type="text"]:focus {
+  outline: none;
+  border-color: #ffca80;
+  box-shadow: 0 0 0 3px rgba(224, 247, 77, 0.25);
+}
+/* Optional: Add a search icon to the search input */
+.date-filters input[type="text"]::placeholder {
+  color: #6c757d; /* Placeholder color */
+  opacity: 1; /* Ensure placeholder is fully opaque */
+}
+/* Button with class="export-btn" */
+.export-btn {
+  background-color: #28a745; 
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(46, 46, 46, 0.03);
+}
+
+/* Hover effect */
+.export-btn:hover {
+  background-color: #218838;
+  transform: scale(1.02);
+}
+
+/* Optional: active/click effect */
+.export-btn:active {
+  background-color: #218838;
+  transform: scale(0.98);
+}
+.btn.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(46, 46, 46, 0.03);
+}
+.btn.btn-danger:hover {
+  background-color: #c82333;
+  transform: scale(1.02);
+}
+.btn.btn-danger:active {
+  transform: scale(0.98);
+}
+
