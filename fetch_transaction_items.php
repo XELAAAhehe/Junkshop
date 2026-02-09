@@ -1,4 +1,21 @@
 <?php
+// Prevent PHP warnings from breaking the JSON response
+error_reporting(0); 
+header('Content-Type: application/json');
+
+// 1. INCLUDE YOUR SHARED CONNECTION
+include('includes/db.php');
+
+// 2. BRIDGE THE VARIABLE & CHECK CONNECTION
+// Your db.php creates $conn. We use it here.
+$mysqli = $conn;
+
+if (!$mysqli) {
+    http_response_code(500);
+    echo json_encode(["error" => "Database connection failed"]);
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(["error" => "Invalid request method"]);
@@ -13,14 +30,9 @@ if (!$transaction_id) {
     exit;
 }
 
-$conn = new mysqli("localhost", "root", "", "junkshop_db");
-if ($conn->connect_error) {
-    http_response_code(500);
-    echo json_encode(["error" => "Database connection failed"]);
-    exit;
-}
-
-$stmt = $conn->prepare("
+// 3. USE THE EXISTING CONNECTION ($mysqli)
+// DO NOT create a "new mysqli" here.
+$stmt = $mysqli->prepare("
     SELECT 
         i.type, 
         i.measure, 
@@ -30,6 +42,13 @@ $stmt = $conn->prepare("
     FROM transaction_items i
     WHERE i.transaction_id = ?
 ");
+
+if (!$stmt) {
+    http_response_code(500);
+    echo json_encode(["error" => "Query preparation failed: " . $mysqli->error]);
+    exit;
+}
+
 $stmt->bind_param("i", $transaction_id);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -40,9 +59,8 @@ while ($row = $result->fetch_assoc()) {
 }
 
 $stmt->close();
-$conn->close();
+// Do not close $mysqli here if other scripts need it, but for a single AJAX call it's fine.
+$mysqli->close();
 
-header('Content-Type: application/json');
 echo json_encode($items);
-
-
+?>
